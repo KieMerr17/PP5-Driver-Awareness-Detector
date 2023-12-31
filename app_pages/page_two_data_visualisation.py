@@ -13,6 +13,7 @@ def page_two_content():
         "between a drivers eyes which are aware and open and that of eyes which are closed."
     )
 
+    # select version folder
     version = 'v1'
     if st.checkbox("Difference between average images from each set and the variability across those images"):
 
@@ -27,3 +28,13 @@ def page_two_content():
         st.image(avg_eyes_open, caption="Eyes Open: Average and Variability")
         st.image(avg_eyes_closed, caption="Eyes Closed: Average and Variability")
         st.write("---")
+
+    if st.checkbox("Differences between average 'Eyes Open' image, and 'Eyes Closed' image."):
+
+        diff_between_avgs = plt.imread(f'outputs/{version}/avg_diff.png')
+
+        st.warning(
+            f"We notice this study didn't show patters where we could intuitavely"
+            f" differentiate between eyes_open and eyes_closed")
+
+        st.image(diff_between_avgs, caption="Difference between average images for eyes_open and eyes_closed")
