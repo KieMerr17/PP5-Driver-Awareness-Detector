@@ -1,12 +1,10 @@
 import streamlit as st
 import os
-import pandas as pd
-import numpy as np
-import seaborn as sns
 import matplotlib.pyplot as plt
 
 
 def page_two_content():
+    #description for the page
     st.write("### Awareness Visualisation")
     st.info(
         "To fulfill the first business requirement, we have developed a visualisation technique capable of distinguishing "
@@ -15,6 +13,8 @@ def page_two_content():
 
     # select version folder
     version = 'v1'
+
+    # average and variability
     if st.checkbox("Difference between average images from each set and the variability across those images"):
 
         avg_eyes_open = plt.imread(f"outputs/{version}/avg_var_eyes_open.png")
@@ -29,6 +29,7 @@ def page_two_content():
         st.image(avg_eyes_closed, caption="Eyes Closed: Average and Variability")
         st.write("---")
 
+    # difference between average images
     if st.checkbox("Differences between average 'Eyes Open' image, and 'Eyes Closed' image."):
 
         diff_between_avgs = plt.imread(f'outputs/{version}/avg_diff.png')
@@ -38,3 +39,16 @@ def page_two_content():
             f" differentiate between eyes_open and eyes_closed")
 
         st.image(diff_between_avgs, caption="Difference between average images for eyes_open and eyes_closed")
+
+    # image montage
+    if st.checkbox("Image Montage"):
+
+        # select folder and identify labels
+        my_data_dir = 'inputs/awareness'
+        labels = os.listdir(my_data_dir + '/validation')
+        label_to_display = st.selectbox(label="Please select an option", options=labels, index=0)
+
+        if st.button("View Montage"):
+            montage = plt.imread(f'outputs/{label_to_display}Montage.png')
+            st.image(montage)
+        st.write("---")
