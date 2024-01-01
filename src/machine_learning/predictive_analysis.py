@@ -25,7 +25,7 @@ def plot_predictions_probabilities(pred_proba, pred_class):
 
     prob_per_class = prob_per_class.round(3)
     prob_per_class['Diagnostic'] = prob_per_class.index
-    
+
     fig = px.bar(
             prob_per_class,
             x = 'Diagnostic',
@@ -38,13 +38,20 @@ def plot_predictions_probabilities(pred_proba, pred_class):
 
 def resize_input_image(img, version):  
     """
-    Reshape image to average image size
+    Check if image is Greyscale or Colour
+    Reshape image to the average image size
     """
+    image_shape = load_pkl_file(file_path=f"outputs/{version}/image_shape.pkl")
+    img_resized = img.resize((image_shape[1], image_shape[0]))
 
-    #load file and resize
-    image_shape = load_pkl_file(file_path = f"outputs/{version}/image_shape.pkl")
-    img_resized = img.resize((image_shape[1], image_shape[0]), Image.ANTIALIAS)
-    my_image = np.expand_dims(img_resized, axis=0)/255
+    # Check if the image is grayscale
+    if len(img_resized.getbands()) == 1:
+        # Convert to RGB to have 3 channels
+        img_resized = img_resized.convert("RGB")
+        img_array = np.array(img_resized)
+        my_image = np.expand_dims(img_array, axis=0) / 255
+    else:
+        my_image = np.expand_dims(np.array(img_resized), axis=0) / 255
 
     return my_image
 
@@ -58,7 +65,7 @@ def load_model_and_predict(my_image, version):
 
     pred_proba = model.predict(my_image)[0,0]
 
-    target_map = {v: k for k, v in {'eyes open': 0, 'eyes closed': 1}.items()}
+    target_map = {v: k for k, v in {'eyes closed': 0, 'eyes open': 1}.items()}
 
     pred_class =  target_map[pred_proba > 0.5]  
 
@@ -68,5 +75,5 @@ def load_model_and_predict(my_image, version):
     st.write(
         "The prodiction given for the image uploaded is: "
         f"**{pred_class.lower()}**.")
-    
+
     return pred_proba, pred_class
