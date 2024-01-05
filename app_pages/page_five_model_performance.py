@@ -26,5 +26,24 @@ def page_five_content():
 
     label_distribution = plt.imread(f"outputs/{version}/labels_distribution.png")
     st.image(label_distribution, caption='Label Distribution for Train, Validation, and Test Sets')
+    st.write("---")
+
+
+
+    st.write("### Model Performance ###")
+
+    st.write("##### Accuracy and Val_Accuracy #####")
+    st.warning(
+        "Accuracy serves as a metric to assess the overall correctness of the model's predictions against "
+        "the true labels in the dataset. It is calculated as the ratio of correct predictions to the total number of predictions made by the model.\n\n"
+        "During the model training process, a variant of accuracy known as validation accuracy (val_accuracy) is often used. "
+        "In machine learning, it is customary to divide the dataset into training and validation sets. \n\n"
+        "The training set is employed for model training, while the validation set is used to evaluate the model's "
+        "performance throughout the training phase."
+    )
+
+    model_acc = plt.imread(f"outputs/{version}/model_training_acc.png")
+    st.image(model_acc, caption='Model Training Accuracy')
+    st.write("---")
 
     
