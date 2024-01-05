@@ -5,6 +5,8 @@ from app_pages.multipage import MultiPage
 from app_pages.page_one_summary import page_one_content
 from app_pages.page_two_data_visualisation import page_two_content
 from app_pages.page_three_awareness_detector import page_three_content
+from app_pages.page_four_project_hypothesis import page_four_content
+
 
 
 # App name
@@ -14,6 +16,8 @@ app = MultiPage(app_name= "Driver Awareness Detector")
 app.add_page("Project Summary", page_one_content)
 app.add_page("Data Visualisation", page_two_content)
 app.add_page("Awareness Detector", page_three_content)
+app.add_page("The Project Hypothesis", page_four_content)
+
 
 
 
