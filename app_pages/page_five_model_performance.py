@@ -1,6 +1,8 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 from matplotlib.image import imread
+import pandas as pd
+from src.machine_learning.evaluate_clf import load_test_evaluation
 
 
 def page_five_content():
@@ -61,4 +63,25 @@ def page_five_content():
     st.image(model_loss, caption='Model Training Losses')
     st.write("---")
 
+
+    st.write("### Model Performance on the Test Set")
+
+    st.write("##### Test evaluation summary %")
+    # import the evaluation test results
+    data = load_test_evaluation(version)
+
+    # Convert data to percentage
+    data[1] *= 100  # 'Accuracy'
+    data[0] *= 100  # 'Loss'
+    st.dataframe(pd.DataFrame(data, index=['Loss', 'Accuracy']))
+
+    st.warning(
+        "A Confusion Matrix serves as a performance measurement to show the effectiveness of a well-trained model. "
+        "A proficient model typically exhibits high results for True Negative and True Positive, both of which accurately reflect reality.\n\n "
+
+        "Alternatively, a matrix featuring high results for False Positive and False Negative values would indicate "
+        "a below standard performing model."
+    )
     
+    con_mat = plt.imread(f"outputs/{version}/confusion_matrix.png")
+    st.image(con_mat, caption="Confusion Matrix", width=700)
