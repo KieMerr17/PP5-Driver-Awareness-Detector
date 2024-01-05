@@ -53,6 +53,13 @@ def resize_input_image(img, version):
     else:
         my_image = np.expand_dims(np.array(img_resized), axis=0) / 255
 
+    # Check if the image has 4 channels and convert to 3 channels
+    if img_resized.mode == 'RGBA':
+        img_resized = img_resized.convert("RGB")
+
+    img_array = np.array(img_resized)
+    my_image = np.expand_dims(img_array, axis=0) / 255
+
     return my_image
 
 
