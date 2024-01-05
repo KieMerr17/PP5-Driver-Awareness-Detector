@@ -44,9 +44,7 @@ def page_two_content():
     if st.checkbox("Image Montage"):
 
         # select folder and identify labels
-        my_data_dir = 'inputs/awareness'
-        labels = os.listdir(my_data_dir + '/validation')
-        label_to_display = st.selectbox(label="Please select an option", options=labels, index=0)
+        label_to_display = st.selectbox(label="Please select an option", options=['eyes_open', 'eyes_closed'], index=0)
 
         if st.button("View Montage"):
             montage = plt.imread(f'outputs/{label_to_display}Montage.png')
