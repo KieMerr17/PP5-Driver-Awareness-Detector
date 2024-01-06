@@ -219,7 +219,7 @@ On this page, users can upload images from the dataset to determine whether the 
 <details><summary>Image upload</summary>
 <img src="assets/images/awareness-detector-01.png">
 <img src="assets/images/awareness-detector-02.png">
-</details>
+</details><br>
 
 Below, you can observe assessments for a couple of images from the trained set, along with their corresponding prediction results. Additionally, an image not included in the training set is presented, along with its prediction results.
 
@@ -275,3 +275,32 @@ Two graphs show the model's performance, focusing on Accuracy and Loss. The conc
 | ------- | ------- |
 | Non trained image upload causing type error | Adjusted code to check number of image channels and if the image is RGBA when resizing image. Make adjustments where necessary
 |
+
+### Heroku Deployment
+This application has been deployed from GitHub to Heroku by following the steps:<br>
+1. Create a requirement.txt file in GitHub, for Heroku to read, listing the dependencies the program needs in order to run.
+2. Set the runtime.txt Python version to a version that the current Heroku stack supports.
+3. Push the recent changes to GitHub and go to your Heroku account page to create and deploy.
+4. Chose "CREATE NEW APP", give it a unique name, and select a geographical region.
+5. From the Deploy tab, chose GitHub as deployment method, connect to GitHub and search for and select the project's repository.
+6. Select the branch you want to deploy, then click Deploy Branch.
+7. Click to "Enable Automatic Deploys " or chose to "Deploy Branch" from the Manual Deploy section.
+8. Wait for the logs to run while the dependencies are installed and the app is being built.
+9. The mock terminal is then ready and accessible from a link similar to https://your-projects-name.herokuapp.com/
+10. If the slug size is too large then add large files not required for the app to the .slugignore file, similar to the .gitignore file.
+
+### Fork Repository
+To fork the repository by following these steps:
+1. Go to the GitHub repository
+2. Click on Fork button in upper right hand corner
+<hr>
+
+### Clone Repository
+You can clone the repository by following these steps:
+1. Go to the GitHub repository 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefere to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7. Press Enter to create your local clone.
