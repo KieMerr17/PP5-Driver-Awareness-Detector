@@ -5,6 +5,7 @@
 2. [Business Requirements](#business-requirements)
 3. [Hypothesis and Validation](#hypothesis-and-validation)
 4. [Model Rationale](#model-rationale)
+5. [User Stories](#user-stories)
 
 
 ### Deployed Dashboard [here](https://driver-awareness-detector-cac7971f0415.herokuapp.com/)
@@ -100,6 +101,24 @@ This measures the difference between actual and predicted probabilities, suitabl
 * Optimizer - Adam:
 
 Adam is a good choice because it adapts its learning rate for each parameter, making the model converge faster without overshooting.
+
+
+## User Stories
+1. As a User, I want to view average images and image variances for 'eyes open' and 'eyes closed' to easily discern the distinctions between the two states.
+
+2. As a User, I want to see a collection of images from each category to gain a understanding of the standard features within each image classification.
+
+3. As a User, I want a machine learning tool that analyzes images and provides predictions on the state of the eyes, enabling quick and reliable assessments.
+
+4. As a User, I want to view the prediction probability associated with each analysis to see the models accuracy.
+
+5. As a User, I want a machine learning tool to deliver a minimum accuracy of 90%, ensuring a reliable basis for decision-making and giving confidence in the model's capabilities.
+
+6. As a User, I want the ability to upload multiple images in one session.
+
+7. As a User, I want a straightforward option to download a detailed report of the model predictions for record-keeping and further analysis.
+
+
 
 
 
