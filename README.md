@@ -267,3 +267,11 @@ Two graphs show the model's performance, focusing on Accuracy and Loss. The conc
 <summary>Prediction % and Confusion Matrix</summary>
 <img src="assets/images/model-performance-04.png">
 </details>
+
+
+## Bugs
+
+| **Bug** | **Fix** |
+| ------- | ------- |
+| Non trained image upload causing type error | Adjusted code to check number of image channels and if the image is RGBA when resizing image. Make adjustments where necessary
+|
