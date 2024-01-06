@@ -80,7 +80,7 @@ def load_model_and_predict(my_image, version):
         pred_proba = 1 - pred_proba
 
     st.write(
-        "The prodiction given for the image uploaded is: "
+        "The prediction given for the image uploaded is: "
         f"**{pred_class.lower()}**.")
 
     return pred_proba, pred_class
