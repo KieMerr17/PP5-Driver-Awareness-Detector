@@ -4,8 +4,7 @@
 1. [Dataset Content](#dataset-content)
 2. [Business Requirements](#business-requirements)
 3. [Hypothesis and Validation](#hypothesis-and-validation)
-
-
+4. [Model Rationale](#model-rationale)
 
 
 ### Deployed Dashboard [here](https://driver-awareness-detector-cac7971f0415.herokuapp.com/)
@@ -59,3 +58,48 @@ It is said that a machine learning model can discern a visual pattern to classif
 * Validation:
 
 To validate this hypothesis, a machine learning model was trained on the dataset, and its performance was evaluated. The model achieved an accuracy exceeding 90% on the test set, thereby substantiating the hypothesis.
+
+
+## Model Rationale
+
+I utilized the Keras Tuner to optimize the model's parameters.
+Let's delve into each element:
+
+* Convolutional Layers
+
+The model integrates three convolutional layers, essential for analyzing image data and capturing spatial hierarchies of features. Multiple layers enable the model to grasp more complex features, detecting basic elements in initial layers and intricate patterns associated with the eye's state in deeper layers.
+
+* MaxPooling Layers:
+
+After each convolutional layer, a MaxPooling layer reduces computational requirements by shrinking feature maps while preserving crucial information.
+
+* Flatten Layer:
+
+This layer transforms the 3D output from prior layers into a 1D vector, making it compatible with dense layers.
+
+* Dense Layers:
+
+After a parameter search, it was determined that 128 units in the dense layer strike a balance between model complexity and the risk of overfitting, allowing the model to capture sufficient information without becoming overly complex.
+
+* Dropout Layer:
+
+A dropout rate of 0.5 means roughly half of the input units are dropped out during each training step, encouraging generalization and preventing overfitting.
+
+* Output Layer:
+
+The model employs a sigmoid activation function, suitable for binary classification.
+
+* Activation Function - ReLU:
+
+ReLU adds non-linearity efficiently and helps avoid the vanishing gradient issue in backpropagation.
+
+* Loss Function - Binary Crossentropy:
+
+This measures the difference between actual and predicted probabilities, suitable for binary classification.
+
+* Optimizer - Adam:
+
+Adam is a good choice because it adapts its learning rate for each parameter, making the model converge faster without overshooting.
+
+
+
