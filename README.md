@@ -3,6 +3,8 @@
 ## Table of Contents
 1. [Dataset Content](#dataset-content)
 2. [Business Requirements](#business-requirements)
+3. [Hypothesis and Validation](#hypothesis-and-validation)
+
 
 
 
@@ -36,3 +38,24 @@ The model will be designed as a binary classifier, employing machine learning al
 3. Generation of Downloadable Reports
 
 Following the analysis of a driver's eye, the system will generate detailed prediction reports for each examination. These reports will contain information such as the date and time of the examination, the outcome of the prediction, 'Eyes Open' or 'Eyes Closed', and the associated probability. Users will be able to download these reports for reference and further analysis.
+
+
+## Hypothesis and Validation
+
+* Hypothesis 1:
+
+It is said that tired drivers may show a higher degree of closed eyes compared to alert drivers.
+
+* Validation:
+
+To validate this hypothesis, we conducted an analysis of the dataset, specifically focusing on the average degree of eye openness and closedness.
+
+Using Machine Learning, it was shown that the average degree of eye openness in fatigued drivers is notably lower than that observed in alert individuals. This observation is reinforced by the examination of both Average Image and Variability Images, highlighting the distinction between eyes open and eyes closed.
+
+* Hypothesis 2:
+
+It is said that a machine learning model can discern a visual pattern to classify closed and open eyes with an accuracy surpassing 90%.
+
+* Validation:
+
+To validate this hypothesis, a machine learning model was trained on the dataset, and its performance was evaluated. The model achieved an accuracy exceeding 90% on the test set, thereby substantiating the hypothesis.
