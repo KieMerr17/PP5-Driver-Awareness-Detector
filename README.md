@@ -373,6 +373,7 @@ You can clone the repository by following these steps:
 This completes my course in Full Stack Dev (Data Analytics) and is my final project with Code Institute, i have had such fun, i would like to thank:
 - My wonderful wife, Emma. You have put up with many hours spent inside helping me out beautiful days when we could have been out walking or persuing other adventures. You encouraged me to branch out into an industry which i knew nothing about, to get excited about working on myself more and have supported me so much along the way. 
 - My mentor, Mo for all the support you have provided, awful internet connections at times whilst travelling around the world during our calls but non the less, you were there to help me and provide ideas to ensure i get the most out of myself.
+- People at my place of work, you have incredible brains and have made me understand things i never though i could. I look forward to continuing to learn from you.
 
 ##### Back to [top](#table-of-contents)
 
