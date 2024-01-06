@@ -26,5 +26,5 @@ def page_one_content():
         "- An accurate prediction of a driver awareness \n\n "
         "- Create downloadable reports based on these predictions.\n\n "
         "The successful completion of these requirements will serve as a proof of concept, paving the way for further development. "
-        "The ultimate objective is to establish a machine learning system capable of detecting a drivers awareness."
+        "The ultimate objective is to establish a machine learning system capable of detecting a drivers current awareness through the state of their eyes."
         )

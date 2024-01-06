@@ -293,7 +293,7 @@ This page presents the hypothesis for the project and the corresponding conclusi
 
 This section offers an overview of the data distribution, highlighting distinctions between test, train, and validate sets, along with their respective ratios.
 
-Two graphs show the model's performance, focusing on Accuracy and Loss. The concluding graph features the confusion matrix, supported by an explanation. Additionally, a chart provides a summary of the model's overall performance in terms of Loss and Accuracy, measured in '%'.
+Two graphs show the model's performance, focusing on Accuracy and Loss. The concluding graph features the confusion matrix, supported by an explanation. Additionally, a chart provides a summary of the model's overall performance in terms of Loss and Accuracy.
 
 <details>
 <summary>Image Distribution Graph</summary>
@@ -308,7 +308,7 @@ Two graphs show the model's performance, focusing on Accuracy and Loss. The conc
 <img src="assets/images/model-performance-03.png">
 </details>
 <details>
-<summary>Prediction % and Confusion Matrix</summary>
+<summary>Prediction and Confusion Matrix</summary>
 <img src="assets/images/model-performance-04.png">
 </details>
 

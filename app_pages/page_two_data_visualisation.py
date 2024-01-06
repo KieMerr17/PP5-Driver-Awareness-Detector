@@ -35,8 +35,8 @@ def page_two_content():
         diff_between_avgs = plt.imread(f'outputs/{version}/avg_diff.png')
 
         st.warning(
-            "We notice this study didn't show patterns where we could intuitavely"
-            " differentiate between eyes_open and eyes_closed")
+            "We notice this study didn't show patterns where we could clearly "
+            "differentiate between eyes_open and eyes_closed")
 
         st.image(diff_between_avgs, caption="Difference between average images for eyes_open and eyes_closed")
 

@@ -66,13 +66,10 @@ def page_five_content():
 
     st.write("### Model Performance on the Test Set")
 
-    st.write("##### Test evaluation summary %")
+    st.write("##### Test evaluation summary")
     # import the evaluation test results
     data = load_test_evaluation(version)
 
-    # Convert data to percentage
-    data[1] *= 100  # 'Accuracy'
-    data[0] *= 100  # 'Loss'
     st.dataframe(pd.DataFrame(data, index=['Loss', 'Accuracy']))
 
     st.warning(
