@@ -35,13 +35,17 @@ def page_two_content():
         diff_between_avgs = plt.imread(f'outputs/{version}/avg_diff.png')
 
         st.warning(
-            f"We notice this study didn't show patters where we could intuitavely"
-            f" differentiate between eyes_open and eyes_closed")
+            "We notice this study didn't show patterns where we could intuitavely"
+            " differentiate between eyes_open and eyes_closed")
 
         st.image(diff_between_avgs, caption="Difference between average images for eyes_open and eyes_closed")
 
     # image montage
     if st.checkbox("Image Montage"):
+
+        st.warning(
+            "The Image montage quickly helps to identify differences between the image "
+            "classes. We notice more darker colours in the centre when showing 'Eyes Open'")
 
         # select folder and identify labels
         label_to_display = st.selectbox(label="Please select an option", options=['eyes_open', 'eyes_closed'], index=0)

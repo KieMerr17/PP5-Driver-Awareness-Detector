@@ -54,21 +54,21 @@ Following the analysis of a driver's eye, the system will generate detailed pred
 
 ## Hypothesis and Validation
 
-* Hypothesis 1:
+- Hypothesis 1:
 
 It is said that tired drivers may show a higher degree of closed eyes compared to alert drivers.
 
-* Validation:
+- Validation:
 
 To validate this hypothesis, we conducted an analysis of the dataset, specifically focusing on the average degree of eye openness and closedness.
 
 Using Machine Learning, it was shown that the average degree of eye openness in fatigued drivers is notably lower than that observed in alert individuals. This observation is reinforced by the examination of both Average Image and Variability Images, highlighting the distinction between eyes open and eyes closed.
 
-* Hypothesis 2:
+- Hypothesis 2:
 
 It is said that a machine learning model can discern a visual pattern to classify closed and open eyes with an accuracy surpassing 90%.
 
-* Validation:
+- Validation:
 
 To validate this hypothesis, a machine learning model was trained on the dataset, and its performance was evaluated. The model achieved an accuracy exceeding 90% on the test set, thereby substantiating the hypothesis.
 
@@ -80,39 +80,39 @@ To validate this hypothesis, a machine learning model was trained on the dataset
 I utilized the Keras Tuner to optimize the model's parameters.
 Let's delve into each element:
 
-* Convolutional Layers
+- Convolutional Layers
 
 The model integrates three convolutional layers, essential for analyzing image data and capturing spatial hierarchies of features. Multiple layers enable the model to grasp more complex features, detecting basic elements in initial layers and intricate patterns associated with the eye's state in deeper layers.
 
-* MaxPooling Layers:
+- MaxPooling Layers:
 
 After each convolutional layer, a MaxPooling layer reduces computational requirements by shrinking feature maps while preserving crucial information.
 
-* Flatten Layer:
+- Flatten Layer:
 
 This layer transforms the 3D output from prior layers into a 1D vector, making it compatible with dense layers.
 
-* Dense Layers:
+- Dense Layers:
 
 After a parameter search, it was determined that 128 units in the dense layer strike a balance between model complexity and the risk of overfitting, allowing the model to capture sufficient information without becoming overly complex.
 
-* Dropout Layer:
+- Dropout Layer:
 
 A dropout rate of 0.5 means roughly half of the input units are dropped out during each training step, encouraging generalization and preventing overfitting.
 
-* Output Layer:
+- Output Layer:
 
 The model employs a sigmoid activation function, suitable for binary classification.
 
-* Activation Function - ReLU:
+- Activation Function - ReLU:
 
 ReLU adds non-linearity efficiently and helps avoid the vanishing gradient issue in backpropagation.
 
-* Loss Function - Binary Crossentropy:
+- Loss Function - Binary Crossentropy:
 
 This measures the difference between actual and predicted probabilities, suitable for binary classification.
 
-* Optimizer - Adam:
+- Optimizer - Adam:
 
 Adam is a good choice because it adapts its learning rate for each parameter, making the model converge faster without overshooting.
 
