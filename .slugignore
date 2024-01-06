@@ -3,3 +3,4 @@ jupyter_notebooks*
 inputs/awareness/test*
 inputs/awareness/train*
 inputs/awareness/validation*
+assets*
