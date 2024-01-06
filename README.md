@@ -6,8 +6,14 @@
 3. [Hypothesis and Validation](#hypothesis-and-validation)
 4. [Model Rationale](#model-rationale)
 5. [User Stories](#user-stories)
-6. [Business Requirements Rationale and Mapping](#business-requirements-rationale-and-mapping)
-7. [Machine Learning Business Case](#machine-learning-business-case)
+6. [Technologies Used](#technologies-used)
+7. [Business Requirements Rationale and Mapping](#business-requirements-rationale-and-mapping)
+8. [Machine Learning Business Case](#machine-learning-business-case)
+9. [Dashboard Design](#dashboard-design)
+10. [Bugs](#bugs)
+11. [Deployment](#deployment)
+12. [Credits](#credits)
+13. [Acknowledgments](#acknowledgements)
 
 
 The inspiration for this project stems from my current employer, Wayve, a company dedicated to embodying AI within self-driving cars. I aimed to align the project with this industry by focusing on creating a system capable of detecting signs of tiredness in individuals behind the wheel.
@@ -22,6 +28,7 @@ Identifying signs of tiredness in drivers is important for accident prevention a
 
 The dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/kutaykutlu/drowsiness-detection).
 
+##### Back to [top](#table-of-contents)
 
 ## Business Requirements
 
@@ -43,6 +50,7 @@ The model will be designed as a binary classifier, employing machine learning al
 
 Following the analysis of a driver's eye, the system will generate detailed prediction reports for each examination. These reports will contain information such as the date and time of the examination, the outcome of the prediction, 'Eyes Open' or 'Eyes Closed', and the associated probability. Users will be able to download these reports for reference and further analysis.
 
+##### Back to [top](#table-of-contents)
 
 ## Hypothesis and Validation
 
@@ -63,6 +71,8 @@ It is said that a machine learning model can discern a visual pattern to classif
 * Validation:
 
 To validate this hypothesis, a machine learning model was trained on the dataset, and its performance was evaluated. The model achieved an accuracy exceeding 90% on the test set, thereby substantiating the hypothesis.
+
+##### Back to [top](#table-of-contents)
 
 
 ## Model Rationale
@@ -106,6 +116,8 @@ This measures the difference between actual and predicted probabilities, suitabl
 
 Adam is a good choice because it adapts its learning rate for each parameter, making the model converge faster without overshooting.
 
+##### Back to [top](#table-of-contents)
+
 
 ## User Stories
 1. As a User, I want to view average images and image variances for 'eyes open' and 'eyes closed' to easily discern the distinctions between the two states.
@@ -121,6 +133,34 @@ Adam is a good choice because it adapts its learning rate for each parameter, ma
 6. As a User, I want the ability to upload multiple images in one session.
 
 7. As a User, I want a straightforward option to download a detailed report of the model predictions for record-keeping and further analysis.
+
+##### Back to [top](#table-of-contents)
+
+
+## Technologies Used
+
+### Platforms
+- Heorku
+- Jupyter Notebooks
+- Kaggle
+- GitHub
+
+### Languages
+- Python
+- Markdown
+
+### Data Analysis and ML Libraries
+- Numpy
+- Pandas
+- Matplotlib
+- Seaborn
+- Plotly
+- Streamlit
+- Scikit-learn
+- Tensorflow
+- Keras
+
+##### Back to [top](#table-of-contents)
 
 
 ## Business Requirements Rationale and Mapping
@@ -160,6 +200,8 @@ This user story is addressed through the implementation of the system generating
 
 1. The Awareness Detector page allows users to download the full report of the predictions for any and all of the images they upload to the detector tool.
 
+##### Back to [top](#table-of-contents)
+
 
 ## Machine Learning Business Case
 
@@ -174,6 +216,8 @@ This user story is addressed through the implementation of the system generating
 
 **Dataset:** 
 - The dataset used for this project is from Kaggle, consisting of grayscale images labeled as "Eyes Open" or "Eyes Closed." These images form the basis for training and validating the model.
+
+##### Back to [top](#table-of-contents)
 
 
 ## Dashboard Design
@@ -268,13 +312,18 @@ Two graphs show the model's performance, focusing on Accuracy and Loss. The conc
 <img src="assets/images/model-performance-04.png">
 </details>
 
+##### Back to [top](#table-of-contents)
+
 
 ## Bugs
 
 | **Bug** | **Fix** |
 | ------- | ------- |
 | Non trained image upload causing type error | Adjusted code to check number of image channels and if the image is RGBA when resizing image. Make adjustments where necessary
-|
+
+##### Back to [top](#table-of-contents)
+
+## Deployment
 
 ### Heroku Deployment
 This application has been deployed from GitHub to Heroku by following the steps:<br>
@@ -304,3 +353,26 @@ You can clone the repository by following these steps:
 5. Change the current working directory to the one where you want the cloned directory
 6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
 7. Press Enter to create your local clone.
+
+##### Back to [top](#table-of-contents)
+
+
+## Credits 
+
+### Content 
+- Dataset from user [kutaykutlu](https://www.kaggle.com/kutaykutlu) on Kaggle
+
+### Code
+- Template used belongs to [CodeInstitute](https://github.com/Code-Institute-Solutions/milestone-project-bring-your-own-data)
+- Walkthrough Project 1 was used as the skeletal structure of this project
+
+##### Back to [top](#table-of-contents)
+
+
+## Acknowledgements
+This completes my course in Full Stack Dev (Data Analytics) and is my final project with Code Institute, i have had such fun, i would like to thank:
+- My wonderful wife, Emma. You have put up with many hours spent inside helping me out beautiful days when we could have been out walking or persuing other adventures. You encouraged me to branch out into an industry which i knew nothing about, to get excited about working on myself more and have supported me so much along the way. 
+- My mentor, Mo for all the support you have provided, awful internet connections at times whilst travelling around the world during our calls but non the less, you were there to help me and provide ideas to ensure i get the most out of myself.
+
+##### Back to [top](#table-of-contents)
+
