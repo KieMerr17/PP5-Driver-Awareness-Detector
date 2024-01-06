@@ -174,3 +174,96 @@ This user story is addressed through the implementation of the system generating
 
 **Dataset:** 
 - The dataset used for this project is from Kaggle, consisting of grayscale images labeled as "Eyes Open" or "Eyes Closed." These images form the basis for training and validating the model.
+
+
+## Dashboard Design
+The dashboard for this project was developed using Streamlit. 
+
+It consists of five pages: 
+- Project Summary
+- Data Visualization
+- Awareness Detector
+- Project Hypothesis
+- Model Performance
+
+### Project Summary
+This page contains information about the project, including general information, details about the dataset used, and a list of business requirements. 
+<details><summary>Project Summary</summary>
+<img src="assets/images/project-summary-01.png">
+</details>
+
+### Data Visualization
+The Data Visualization page shows the variability between 'eyes open' and 'eyes closed' images, providing mean or average images for each category and displaying the difference between those averages. 
+
+<details><summary>Average and Variabilty</summary>
+<img src="assets/images/data_visualisation-01.png">
+</details>
+<details><summary>Average 'Eyes Open' and 'Eyes Closed' with Difference</summary>
+<img src="assets/images/data_visualisation-02.png">
+</details>
+<br>
+
+This page also presents a montage of random images for both 'Eyes Open' and 'Eyes Closed' labels. Users can choose the category they want to view from a dropdown menu.
+
+<details><summary>Montage</summary>
+<img src="assets/images/data_visualisation-03-1.png">
+'Eyes Open' montage
+<img src="assets/images/data_visualisation-03-2.png">
+'Eyes Closed' montage
+<img src="assets/images/data_visualisation-03-3.png">
+</details>
+
+### Awareness Detector
+On this page, users can upload images from the dataset to determine whether the eyes are classified as 'Eyes Open' or 'Eyes Closed.' A link to the original dataset is provided for users to download images for the detector. The model has demonstrated some exellent results on images that were NOT part of the training set. After uploading, the page performs an analysis and provides a prediction of the eye state, indicating whether it is 'Eyes Open' or 'Eyes Closed.'
+
+<details><summary>Image upload</summary>
+<img src="assets/images/awareness-detector-01.png">
+<img src="assets/images/awareness-detector-02.png">
+</details>
+
+Below, you can observe assessments for a couple of images from the trained set, along with their corresponding prediction results. Additionally, an image not included in the training set is presented, along with its prediction results.
+
+<details><summary>Assessment 1</summary>
+<img src="assets/images/awareness-detector-03.png">
+</details>
+<details><summary>Assessment 2</summary>
+<img src="assets/images/awareness-detector-04.png">
+</details>
+<details><summary>Non Trained Image Results</summary>
+<img src="assets/images/awareness-detector-05-1.png">
+<img src="assets/images/awareness-detector-05-2.png">
+<img src="assets/images/awareness-detector-05-3.png">
+<img src="assets/images/awareness-detector-05-4.png">
+</details>
+<details><summary>Prediction Results Graph</summary>
+<img src="assets/images/awareness-detector-06.png">
+</details>
+
+### Project Hypothesis
+This page presents the hypothesis for the project and the corresponding conclusions drawn based on the findings and model training.
+<details><summary>Show Hypothesis</summary>
+<img src="assets/images/hypothesis-01.png">
+</details>
+
+### Model Performance
+
+This section offers an overview of the data distribution, highlighting distinctions between test, train, and validate sets, along with their respective ratios.
+
+Two graphs show the model's performance, focusing on Accuracy and Loss. The concluding graph features the confusion matrix, supported by an explanation. Additionally, a chart provides a summary of the model's overall performance in terms of Loss and Accuracy, measured in '%'.
+
+<details>
+<summary>Image Distribution Graph</summary>
+<img src="assets/images/model-performance-01.png">
+</details>
+<details>
+<summary>Accuracy and Val_Accuracy</summary>
+<img src="assets/images/model-performance-02.png">
+</details>
+<details>
+<summary>Loss and Val_Loss</summary>
+<img src="assets/images/model-performance-03.png">
+</details>
+<details>
+<summary>Prediction % and Confusion Matrix</summary>
+<img src="assets/images/model-performance-04.png">
+</details>
