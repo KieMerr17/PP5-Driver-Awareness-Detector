@@ -7,8 +7,10 @@
 4. [Model Rationale](#model-rationale)
 5. [User Stories](#user-stories)
 6. [Business Requirements Rationale and Mapping](#business-requirements-rationale-and-mapping)
+7. [Machine Learning Business Case](#machine-learning-business-case)
 
-The inspiration for this project stems from my current employer, a company dedicated to embodying AI within self-driving cars. I aimed to align the project with this industry by focusing on creating a system capable of detecting signs of tiredness in individuals behind the wheel.
+
+The inspiration for this project stems from my current employer, Wayve, a company dedicated to embodying AI within self-driving cars. I aimed to align the project with this industry by focusing on creating a system capable of detecting signs of tiredness in individuals behind the wheel.
 
 ### Deployed Dashboard [here](https://driver-awareness-detector-cac7971f0415.herokuapp.com/)
 
@@ -157,3 +159,18 @@ Following the analysis of a driver's eye, the system will generate detailed pred
 This user story is addressed through the implementation of the system generating detailed reports for each examination, which users can download for reference and further analysis.
 
 1. The Awareness Detector page allows users to download the full report of the predictions for any and all of the images they upload to the detector tool.
+
+
+## Machine Learning Business Case
+
+**Objective:** 
+- This project aims to use machine learning to create a reliable tiredness detection system for drivers. The system will categorize images into 'Eyes Open' and 'Eyes Closed', serving as a proof of concept for its effectiveness.
+
+**Success Metrics:** 
+- The model's success will be measured by achieving an accuracy of 90% or higher on the test set. It will provide clear indications of the state of a drivers eyes, along with probability scores for each prediction.
+
+**Future uses:**
+- This project could pave the way for advancements like real-time video analysis and alert the system if a driver is becoming tired through their eye state.
+
+**Dataset:** 
+- The dataset used for this project is from Kaggle, consisting of grayscale images labeled as "Eyes Open" or "Eyes Closed." These images form the basis for training and validating the model.
