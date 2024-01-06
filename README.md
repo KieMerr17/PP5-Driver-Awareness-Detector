@@ -6,7 +6,9 @@
 3. [Hypothesis and Validation](#hypothesis-and-validation)
 4. [Model Rationale](#model-rationale)
 5. [User Stories](#user-stories)
+6. [Business Requirements Rationale and Mapping](#business-requirements-rationale-and-mapping)
 
+The inspiration for this project stems from my current employer, a company dedicated to embodying AI within self-driving cars. I aimed to align the project with this industry by focusing on creating a system capable of detecting signs of tiredness in individuals behind the wheel.
 
 ### Deployed Dashboard [here](https://driver-awareness-detector-cac7971f0415.herokuapp.com/)
 
@@ -119,6 +121,39 @@ Adam is a good choice because it adapts its learning rate for each parameter, ma
 7. As a User, I want a straightforward option to download a detailed report of the model predictions for record-keeping and further analysis.
 
 
+## Business Requirements Rationale and Mapping
+
+### Business Requirement 1: Visual Assessment of Driver Awareness
+The system will conduct image analysis to visually distinguish between drivers who are alert and those who are not. The focus of this analysis will be on evaluating the 'openness' of the drivers' eyes to identify potential indicators of tiredness.
+
+- **User Story 1:** As a User, I want to view average images and image variances for 'eyes open' and 'eyes closed' to easily see the differences between the two states.
+- **User Story 2:** As a User, I want to see a collection of images from each category to gain an understanding of the standard features within each image classification.
+
+These user stories have been addressed through the following:
+1. The Data Visualization page in the Streamlit dashboard web tool provides a user-friendly display.
+2. This page allows users to view a montage of each category, composed of random images from each.
+3. Within the Data Visualization page, users can observe both Average Variability and the difference between the two categories.
 
 
+### Business Requirement 2: Accurate Prediction of Driver Awareness
+The model will be designed as a binary classifier, employing machine learning algorithms and computer vision techniques to precisely predict whether a given driver is starting to show signs of tiredness based on their eye state.
 
+- **User Story 3:** As a User, I want a machine learning tool that analyzes images and provides predictions on the state of the eyes, enabling quick and reliable assessments.
+- **User Story 4:** As a User, I want to view the prediction probability associated with each analysis to see the model's accuracy.
+- **User Story 5:** As a User, I want a machine learning tool to deliver a minimum accuracy of 90%, ensuring a reliable basis for decision-making and giving confidence in the model's capabilities.
+- **User Story 6:** As a User, I want the ability to upload multiple images in one session.
+
+These user stories are addressed through the following implementation:
+1. The Awareness Detector page allows users to upload single or multiple images at a time.
+2. It displays the prediction beneath the uploaded image, and a graph shows the percentage probability for an accurate prediction.
+3. The Model Performance page presents a table showing the Accuracy and Loss of the model.
+
+
+### Business Requirement 3: Generation of Downloadable Reports
+Following the analysis of a driver's eye, the system will generate detailed prediction reports for each examination. These reports will contain information such as the date and time of the examination, the outcome of the prediction, 'Eyes Open' or 'Eyes Closed' and a percentage scale for this prediction. Users will be able to download these reports for reference and further analysis.
+
+- **User Story 7:** As a User, I want a straightforward option to download a detailed report of the model predictions for record-keeping and further analysis.
+
+This user story is addressed through the implementation of the system generating detailed reports for each examination, which users can download for reference and further analysis.
+
+1. The Awareness Detector page allows users to download the full report of the predictions for any and all of the images they upload to the detector tool.
